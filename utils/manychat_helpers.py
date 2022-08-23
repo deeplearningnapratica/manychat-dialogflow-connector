@@ -50,6 +50,7 @@ class ManyChatAPI:
                     'messages': [
                         {
                             'type': 'text',
+                            'message_tag': 'ACCOUNT_UPDATE',
                             'text': message,
                         } for message in messages
                     ]
