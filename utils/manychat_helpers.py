@@ -44,13 +44,13 @@ class ManyChatAPI:
     def send_content(self, messages: list) -> dict:
         params = {
             'subscriber_id': self.psid,
+            'message_tag': 'ACCOUNT_UPDATE',
             'data': {
                 'version': 'v2',
                 'content': {
                     'messages': [
                         {
                             'type': 'text',
-                            'message_tag': 'ACCOUNT_UPDATE',
                             'text': message,
                         } for message in messages
                     ]
