@@ -45,6 +45,7 @@ class ManyChatAPI:
         params = {
             'subscriber_id': self.psid,
             'message_tag': 'ACCOUNT_UPDATE',
+            'otn_topic_name': 'Сhannel news',
             'data': {
                 'version': 'v2',
                 'content': {
