@@ -72,7 +72,7 @@ class ManyChatAPI:
             }
         else:
             results = json.loads(response.text)
-
+        print(results)
         return results
 
     def send_flow(self, flow_ns: str) -> dict:
