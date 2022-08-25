@@ -57,7 +57,7 @@ class ManyChatAPI:
                 }
             },
         }
-
+        print(params)
         try:
             response = requests.post(
                 url=f'{self.api_base_url}sending/sendContent',
@@ -65,6 +65,7 @@ class ManyChatAPI:
                 data=json.dumps(params),
                 timeout=5,
             )
+            print(response)
         except Exception as e:
             results = {
                 'status': 'error',
