@@ -122,5 +122,5 @@ class ManyChatAPI:
             }
         else:
             results = json.loads(response.text)
-
+        print(results)
         return results
