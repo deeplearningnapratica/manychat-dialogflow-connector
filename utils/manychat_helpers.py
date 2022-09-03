@@ -31,6 +31,7 @@ class ManyChatAPI:
                 params=params,
                 timeout=5,
             )
+            print(response)
         except Exception as e:
             results = {
                 'status': 'error',
