@@ -43,7 +43,7 @@ class ManyChatAPI:
 
     def send_content(self, messages: list) -> dict:
         params = {
-            'subscriber_id': self.psid,
+            'user_ref': self.psid,
             'data': {
                 'version': 'v2',
                 'content': {
@@ -59,7 +59,7 @@ class ManyChatAPI:
         print(params)
         try:
             response = requests.post(
-                url=f'{self.api_base_url}sending/sendContent',
+                url=f'{self.api_base_url}sending/sendContentByUserRef',
                 headers=self.headers,
                 data=json.dumps(params),
                 timeout=5,
