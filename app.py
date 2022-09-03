@@ -63,7 +63,7 @@ def connector():
         for message in dialogflow_response.messages:
             if message['type'] == 'text':
                 print(message['message'])
-                if message['message'] == 'try sendContent api':
+                if input_text == 'try sendContent api':
                     mc.send_content(
                         messages=[
                             message['message']
