@@ -31,9 +31,10 @@ def connector():
             api_key=manychat_api_key,
             psid=psid,
         )
-
+        
+        mc_user_info = mc.get_user_info()
+        
         if df_text_input == '':
-            mc_user_info = mc.get_user_info()
             if mc_user_info['status'] == 'success':
                 input_text = mc_user_info['data']['last_input_text']
         else:
