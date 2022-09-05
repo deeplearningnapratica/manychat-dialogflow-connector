@@ -63,20 +63,20 @@ def connector():
         for message in dialogflow_response.messages:
             if message['type'] == 'text':
                 print(message['message'])
-                if input_text == 'try sendContent api':
-                    mc.send_content(
-                        messages=[
-                            message['message']
-                        ]
-                    ) 
-                else:
-                    mc.set_custom_field_by_name(
-                                field_name='next_bot_message',
-                                field_value=message['message']
-                    )
-                    mc.send_flow(
-                        flow_ns='content20220903030052_336739'
-                    )                
+                mc.send_content(
+                    messages=[
+                        message['message']
+                    ]
+                ) 
+                /*
+                mc.set_custom_field_by_name(
+                            field_name='next_bot_message',
+                            field_value=message['message']
+                )
+                mc.send_flow(
+                    flow_ns='content20220903030052_336739'
+                )
+                */
             else:
                 mc.send_flow(
                     flow_ns=message['flow']
